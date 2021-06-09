@@ -1,0 +1,9 @@
+---
+- name: This Playbook Creates A File
+  hosts: webservers
+  become: true
+  tasks:
+   - name: Creating A File
+     file:
+       path: /home/prasadadmin/Demofile
+       state: touch    

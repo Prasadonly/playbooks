@@ -1,0 +1,17 @@
+---
+- name: This Playbook Create A Package
+  hosts: webservers
+  become: true
+  tasks:
+   - name: Installing a Package
+     yum:
+      name: httpd
+      state: installed
+     notify: Starting Httpd  Service
+
+  handlers:    
+   - name: Starting Httpd  Service
+     service:
+       name: httpd 
+       state: started      
+       

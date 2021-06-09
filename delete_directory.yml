@@ -1,0 +1,9 @@
+---
+- name: This Playbook Directory A Directory
+  hosts: webservers
+  become: true
+  tasks:
+   - name: Deleting A Directory
+     file:
+       path: /home/prasadadmin/Directory
+       state: absent

@@ -1,0 +1,11 @@
+---
+- name: My Test Playbook
+  hosts: webservers
+  become: true
+  tasks:
+   - name: Copying a File
+     copy:
+      src: /home/prasadadmin/index.html 
+      dest: /home/prasadadmin
+      mode: 0600
+      owner: Ankitha

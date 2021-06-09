@@ -1,0 +1,8 @@
+---
+- name: This Playbook Create A User
+  hosts: webservers
+  become: true
+  tasks:
+   - name: Creating a user Ankitha   
+     user:
+       name: Ankitha        

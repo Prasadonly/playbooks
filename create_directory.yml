@@ -1,0 +1,9 @@
+---
+- name: This Playbook Creates A Directory
+  hosts: webservers
+  become: true
+  tasks:
+   - name: Creating A Directory
+     file:
+       path: /home/prasadadmin/Directory
+       state: directory

@@ -1,0 +1,9 @@
+---
+- name: This Playbook Create A Package
+  hosts: webservers
+  become: true
+  tasks:
+   - name: Installing a Package
+     yum:
+      name: git
+      state: installed      
